@@ -48,25 +48,26 @@ pip install -r requirements.txt
 
 ## 运行方式
 1. 训练模型：
-   ```
+   ```python train.py --model_filename your_model_filename```
 将你的训练数据放到datasets/dataset1/train_images文件夹下，运行train.py脚本，指定模型名称，训练参数等。
-python train.py --model_filename your_model_filename
-such as: python train.py --model_filename '(30)semi-supervisedResUNet.h5'
+```such as: python train.py --model_filename '(30)semi-supervisedResUNet.h5'```
 
-2. 预测并计算统计结果：
-python statistical_prediction.py --model_filename your_model_filename
-such as: python statistical_prediction.py --model_filename '(30)semi-supervisedResUNet.h5'
+3. 预测并计算统计结果：
+```python statistical_prediction.py --model_filename your_model_filename```
+such as:
+```python statistical_prediction.py --model_filename '(30)semi-supervisedResUNet.h5'```
 结果保存至：static_results文件夹
 
-3. 预测并可视化结果：
-python visual_prediction.py --model_filename your_model_filename
-such as: python visual_prediction.py --model_filename '(30)semi-supervisedResUNet.h5'
+5. 预测并可视化结果：
+```python visual_prediction.py --model_filename your_model_filename```
+such as:
+```python visual_prediction.py --model_filename '(30)semi-supervisedResUNet.h5'```
 结果保存至：image_results文件夹
 
 
 
-## 5. 模型效果展示
+## 5. spfca自动标注算法
 ![](spfca.png)
 
-## 6. 模型架构
+## 6. 训练预测路径
 ![](training_and_predict_path.png)
