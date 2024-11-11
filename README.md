@@ -25,12 +25,12 @@
 ```
 
 ## 3. 验证数据集说明
-- datasets文件夹下存放了四个验证数据集，包括：
+```- datasets文件夹下存放了四个验证数据集，包括：
     - dataset1：包含15张与训练数据同一批次采集的图片，用于测试single数据集内模型的性能
     - dataset2：包含15张与dataset1相同成像参数，但设备不同时采集的图片，用于测试仪器设备对模型性能的影响
     - dataset3：包含15张与dataset1相同成像参数，设备不同，图片聚焦更差时采集的图片，用于测试图片清晰度对模型性能的影响
     - dataset4：包含15张与dataset1相同成像参数，设备不同，样本受到一定污染时采集的图片，用于测试样本污染对模型性能的影响
-
+```
 ## 4. 环境配置
 ```SPFCA_code_and_validation
 matplotlib==3.7.1
@@ -44,24 +44,32 @@ scipy==1.10.1
 torch==2.0.1
 ```
 
-pip install -r requirements.txt
+```pip install -r requirements.txt
+```
 
 ## 运行方式
 1. 训练模型：
-   ```python train.py --model_filename your_model_filename```
+```python train.py --model_filename your_model_filename
+```
+
 将你的训练数据放到datasets/dataset1/train_images文件夹下，运行train.py脚本，指定模型名称，训练参数等。
-```such as: python train.py --model_filename '(30)semi-supervisedResUNet.h5'```
+```such as: python train.py --model_filename '(30)semi-supervisedResUNet.h5'
+```
 
 3. 预测并计算统计结果：
-```python statistical_prediction.py --model_filename your_model_filename```
+```python statistical_prediction.py --model_filename your_model_filename
+```
 such as:
-```python statistical_prediction.py --model_filename '(30)semi-supervisedResUNet.h5'```
+```python statistical_prediction.py --model_filename '(30)semi-supervisedResUNet.h5'
+```
 结果保存至：static_results文件夹
 
 5. 预测并可视化结果：
-```python visual_prediction.py --model_filename your_model_filename```
+```python visual_prediction.py --model_filename your_model_filename
+```
 such as:
-```python visual_prediction.py --model_filename '(30)semi-supervisedResUNet.h5'```
+```python visual_prediction.py --model_filename '(30)semi-supervisedResUNet.h5'
+```
 结果保存至：image_results文件夹
 
 
