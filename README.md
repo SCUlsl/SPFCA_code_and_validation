@@ -35,7 +35,7 @@
 ## 4. 环境配置
 **SPFCA_code_and_validation**
 ```
-python==3.11
+python==3.10
 matplotlib==3.7.1
 numpy==1.25.2
 opencv-python==4.8.1.78
